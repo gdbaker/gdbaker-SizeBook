@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">gdbaker-SizeBook</string>
+    <string name="new_record">Create New Record</string>
+    <string name="records">Records</string>
+    <string name="submit_record">Submit Record</string>
+    <string name="text_date">Date (yyyy-mm-dd)</string>
+    <string name="text_name">Name</string>
+    <string name="text_neck">Neck Circumference (inches)</string>
+    <string name="text_bust">Bust Circumference (inches)</string>
+    <string name="text_chest">Chest Circumference (inches)</string>
+    <string name="text_waist">Waist Circumference (inches)</string>
+    <string name="text_hip">Hip Circumference (inches)</string>
+    <string name="text_inseam">Inseam length (inches)</string>
+    <string name="text_comments">Comments</string>
+    <string name="edit_name">Enter name…</string>
+    <string name="edit_date">Enter date…</string>
+    <string name="edit_neck">Enter neck circumference…</string>
+    <string name="edit_bust">Enter bust circumference…</string>
+    <string name="edit_chest">Enter chest circumference…</string>
+    <string name="edit_waist">Enter waist circumference…</string>
+    <string name="edit_hip">Enter hip circumference…</string>
+    <string name="edit_inseam">Enter inseam length…</string>
+    <string name="edit_comments">Enter a comment…</string>
+</resources>
