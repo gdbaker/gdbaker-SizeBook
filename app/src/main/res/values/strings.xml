@@ -21,4 +21,19 @@
     <string name="edit_hip">Enter hip circumference…</string>
     <string name="edit_inseam">Enter inseam length…</string>
     <string name="edit_comments">Enter a comment…</string>
+    <string name="list_chest">Chest:</string>
+    <string name="list_bust">Bust:</string>
+    <string name="list_waist">Waist:</string>
+    <string name="list_inseam">Inseam:</string>
+    <string name="pop_name">Name</string>
+    <string name="pop_edit">Edit</string>
+    <string name="pop_date_entered">Date Entered</string>
+    <string name="pop_empty">Empty</string>
+    <string name="pop_neck_circumference">Neck Circumference</string>
+    <string name="pop_bust_circumference">Bust Circumference</string>
+    <string name="pop_chest_circumference">Chest Circumference</string>
+    <string name="pop_waist_circumference">Waist Circumference</string>
+    <string name="pop_hip_circumference">Hip Circumference</string>
+    <string name="pop_inseam_length">Inseam Length</string>
+    <string name="pop_comments">Comments</string>
 </resources>

@@ -152,7 +152,8 @@
             android:text="@string/submit_record"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/submitRecord" />
+            android:id="@+id/submitRecord"
+            android:onClick="submit"/>
 
 
     </LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/record_item_vertical_margin"
+    android:paddingTop="@dimen/record_item_vertical_margin"
+    android:weightSum="1"
+    android:clickable="true"
+    android:onClick="openPopup"
+    android:id="@+id/listElementLayout">
+
+
+    <TextView
+        android:id="@+id/recordName"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp"
+        android:text="hello"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="@color/names"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingRight="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_bust"
+                android:textStyle="bold"
+                android:paddingRight="10dp"/>
+            <TextView
+                android:id="@+id/recordBust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_chest"
+                android:textStyle="bold"
+                android:paddingRight="3dp"/>
+            <TextView
+                android:id="@+id/recordChest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5"
+                android:textSize="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_waist"
+                android:textStyle="bold"
+                android:paddingRight="13dp"/>
+            <TextView
+                android:id="@+id/recordWaist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list_inseam"
+                android:textStyle="bold"
+                android:paddingRight="3dp"/>
+            <TextView
+                android:id="@+id/recordInseam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.5"
+                android:textSize="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
