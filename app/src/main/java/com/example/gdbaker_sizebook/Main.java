@@ -13,15 +13,21 @@ public class Main extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
     }
 
+    /**
+     * changes activity to Records if the records button is clicked
+     * @param view
+     */
     public void showRecords(View view){
         Intent intent = new Intent(this, Records.class);
         startActivity(intent);
     }
 
+    /**
+     * changes activity to NewRecord if the newRecord button is clicked
+     * @param view
+     */
     public void createRecord(View view){
         Intent intent = new Intent(this, NewRecord.class);
         startActivity(intent);
