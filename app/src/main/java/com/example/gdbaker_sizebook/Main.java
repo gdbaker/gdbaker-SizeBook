@@ -39,9 +39,11 @@ import java.util.Date;
  * An app that can store clothing measurements.
  * All files are stored in the "JSON" format.
  * Uses Record class to store data.
+ * NewRecord creates a Record then send it to Main
+ * using intent.
  *
  * @see Record
- * @author Gregory
+ * @author gdbaker
  * @version 1
  */
 public class Main extends AppCompatActivity {

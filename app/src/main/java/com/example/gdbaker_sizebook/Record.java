@@ -281,9 +281,4 @@ public class Record {
             return df.format(this.date);
         }
     }
-
-    @Override
-    public String toString(){
-        return date.toString() + " | " + name;
-    }
 }

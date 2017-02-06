@@ -1,4 +1,4 @@
-#Mon Feb 06 02:55:40 MST 2017
+#Mon Feb 06 12:59:35 MST 2017
 base.0=/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

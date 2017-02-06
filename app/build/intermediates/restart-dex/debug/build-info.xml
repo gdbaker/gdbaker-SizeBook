@@ -5,29 +5,29 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="116822846103937"
+    timestamp="126602564834617"
     token="-1534245042161678007"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="490" />
+        duration="719" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="414" />
+        duration="646" />
     <task
         name="verifier"
-        duration="41" />
+        duration="25" />
 
     <artifact
         location="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="116822846103937"
+        timestamp="126602564834617"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/outputs/apk/app-debug.apk"
