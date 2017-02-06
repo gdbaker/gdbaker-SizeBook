@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/gson-2.8.0_78761cee014ac8448636f206216e4ff5bd0d7091.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_01c529461da0b1db1b0e51403360714f1ea91cb7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.0_64487bb990735833208f4dad179cd2f87dd3e439.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.0_437c686c9e6132337dc4ed0b8dde7a64e0dab583.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_4c4c635e2dd3a39465bdf17f57ac65059063c30f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.0_147b417196e906ee78ea060ec72f6958b6c0d7a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.0_da82d96322f4f4d919e4af10b899d064aac1480b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.0_fbd04c6f5737319a2b36289071a1f4bd7c7a07c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="613036e05f4d587d7d05d62f8249726d8abf090a">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_aa7fcd657961a28d724a2ae7d70132c39412767a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.0_9a9b6e4fe13081c6257cddc36497d3270fc30591.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.0_df37c42367a413fb2d2a23e968bd3b058f309c05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2f8d92aac229299be9b8a29c4ab0a802c8eb0f43">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/instant-run_eb11ca7944387593ffbaa60fe6450314d030e66e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/Users/Gregory/Documents/Uni/ComputerScience/301/gitstuff/gitTest/gdbaker-SizeBook/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.0_10dd8ddb5dc12496fdb611fe8b274ac50703af60.jar" />
+    </item>
+
+</items>
