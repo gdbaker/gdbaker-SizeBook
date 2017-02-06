@@ -1,5 +1,6 @@
 package com.example.gdbaker_sizebook;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -21,27 +22,19 @@ public class Record {
      * Creates record with attributes
      *
      * @param name
-     * @param date
-     * @param neck
-     * @param bust
-     * @param chest
-     * @param waist
-     * @param hip
-     * @param inseam
-     * @param comments
      */
-    public Record(String name, Date date, Float neck, Float bust, Float chest, Float waist,
-                  Float hip, Float inseam, String comments) {
+    public Record(String name) {
         this.name = name;
-        this.date = date;
-        this.neck = neck;
-        this.bust = bust;
-        this.chest = chest;
-        this.waist = waist;
-        this.hip = hip;
-        this.inseam = inseam;
-        this.comments = comments;
+        this.date = null;
+        this.neck = null;
+        this.bust = null;
+        this.chest = null;
+        this.waist = null;
+        this.hip = null;
+        this.inseam = null;
+        this.comments = "";
     }
+
 
     public String getName() {
         return name;
@@ -113,6 +106,125 @@ public class Record {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+
+    //strings only
+    public String getNeckString(){
+        if(this.neck == null){
+            return "";
+        }
+        else{
+            return String.valueOf(this.neck);
+        }
+    }
+
+    public void setNeckString(String entry){
+        try{
+            this.neck = Float.valueOf(entry);
+        }
+        catch (NumberFormatException e){
+            this.neck = null;
+        }
+    }
+
+    public String getBustString(){
+        if(this.bust == null){
+            return "";
+        }
+        else{
+            return String.valueOf(this.bust);
+        }
+    }
+
+    public void setBustString(String entry){
+        try{
+            this.bust = Float.valueOf(entry);
+        }
+        catch (NumberFormatException e){
+            this.bust = null;
+        }
+    }
+
+    public String getChestString(){
+        if(this.chest == null){
+            return "";
+        }
+        else{
+            return String.valueOf(this.chest);
+        }
+    }
+
+    public void setChestString(String entry){
+        try{
+            this.chest = Float.valueOf(entry);
+        }
+        catch (NumberFormatException e){
+            this.chest = null;
+        }
+    }
+
+    public String getWaistString(){
+        if(this.waist == null){
+            return "";
+        }
+        else{
+            return String.valueOf(this.waist);
+        }
+    }
+
+    public void setWaistString(String entry){
+        try{
+            this.waist = Float.valueOf(entry);
+        }
+        catch (NumberFormatException e){
+            this.waist = null;
+        }
+    }
+
+    public String getHipString(){
+        if(this.hip == null){
+            return "";
+        }
+        else{
+            return String.valueOf(this.hip);
+        }
+    }
+
+    public void setHipString(String entry){
+        try{
+            this.hip = Float.valueOf(entry);
+        }
+        catch (NumberFormatException e){
+            this.hip = null;
+        }
+    }
+
+    public String getInseamString(){
+        if(this.inseam == null){
+            return "";
+        }
+        else{
+            return String.valueOf(this.inseam);
+        }
+    }
+
+    public void setInseamString(String entry){
+        try{
+            this.inseam = Float.valueOf(entry);
+        }
+        catch (NumberFormatException e){
+            this.inseam = null;
+        }
+    }
+
+    public String getDateString(SimpleDateFormat df){
+        if(this.date == null){
+            return "";
+        }
+        else{
+            return df.format(this.date);
+        }
     }
 
     @Override

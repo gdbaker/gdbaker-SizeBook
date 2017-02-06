@@ -52,21 +52,19 @@ public class NewRecord extends AppCompatActivity {
         Context context = getApplicationContext();
 
         String name = nameText.getText().toString();
-        Log.d("typeadfn", name);
+
         if(name.matches("")){
-
-
             CharSequence text = "You Must Enter A Name!";
             int duration = Toast.LENGTH_SHORT;
-            Log.d("typeadfn", "thies");
 
+            //taken from https://developer.android.com/guide/topics/ui/notifiers/toasts.html#Basics
+            //Feb 4, 2017 11:30
             toast = Toast.makeText(context, text, duration);
             toast.show();
             return;
         }
 
         String dateString = dateText.getText().toString();
-
         try {
             date = df.parse(dateString);
         } catch(ParseException e){
@@ -75,7 +73,6 @@ public class NewRecord extends AppCompatActivity {
             } else{
                 CharSequence text = "Invalid Date Entry!";
                 int duration = Toast.LENGTH_SHORT;
-                Log.d("typeadfn", "thies");
 
                 toast = Toast.makeText(context, text, duration);
                 toast.show();
@@ -83,25 +80,24 @@ public class NewRecord extends AppCompatActivity {
             }
         }
 
-        //TODO check all
-        Float neck = Float.valueOf(neckText.getText().toString());
-
-        Float bust = Float.valueOf(bustText.getText().toString());
-        Float chest = Float.valueOf(chestText.getText().toString());
-        Float waist = Float.valueOf(waistText.getText().toString());
-        Float hip = Float.valueOf(hipText.getText().toString());
-        Float inseam = Float.valueOf(inseamText.getText().toString());
         String comments = commentsText.getText().toString();
 
-        Record record = new Record(name, date, neck, bust, chest, waist, hip, inseam, comments);
+        Record record = new Record(name);
+
+        record.setDate(date);
+        record.setNeckString(neckText.getText().toString());
+        record.setBustString(bustText.getText().toString());
+        record.setChestString(chestText.getText().toString());
+        record.setWaistString(waistText.getText().toString());
+        record.setHipString(hipText.getText().toString());
+        record.setInseamString(inseamText.getText().toString());
+        record.setComments(comments);
+
         Gson gson = new Gson();
         String toSend = gson.toJson(record);
-        Log.d("recordsSring", toSend);
 
         intent.putExtra("record", toSend);
 
         startActivity(intent);
     }
-
-
 }

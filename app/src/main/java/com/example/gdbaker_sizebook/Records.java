@@ -1,30 +1,24 @@
 package com.example.gdbaker_sizebook;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -108,12 +102,16 @@ public class Records extends AppCompatActivity {
                     editting = false;
                     popRecord = adapter.getItem(position);
 
+                    //referenced and used some code from
+                    // https://android--code.blogspot.ca/2016/01/android-popup-window-example.html
+                    // Feb 5, 2017 2:30
                     LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
-                    View popView = inflater.inflate(R.layout.more_info_popup, null);
+                    final View popView = inflater.inflate(R.layout.more_info_popup, null);
 
                     popup = new PopupWindow(popView, LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.MATCH_PARENT);
 
+                    //TextViews
                     popName = (TextView) popup.getContentView().findViewById(R.id.popName);
                     popDate = (TextView) popup.getContentView().findViewById(R.id.popDate);
                     popNeck = (TextView) popup.getContentView().findViewById(R.id.popNeck);
@@ -124,6 +122,7 @@ public class Records extends AppCompatActivity {
                     popInseam = (TextView) popup.getContentView().findViewById(R.id.popInseam);
                     popComments = (TextView) popup.getContentView().findViewById(R.id.popComments);
 
+                    //EditText
                     popNameEdit = (EditText) popup.getContentView().findViewById(R.id.popNameEdit);
                     popDateEdit = (EditText) popup.getContentView().findViewById(R.id.popDateEdit);
                     popNeckEdit = (EditText) popup.getContentView().findViewById(R.id.popNeckEdit);
@@ -135,25 +134,8 @@ public class Records extends AppCompatActivity {
                     popCommentsEdit = (EditText) popup.getContentView().findViewById(R.id.popCommentsEdit);
 
                     // Populate the data into the template view using the data object
-                    popName.setText(popRecord.getName());
-                    popDate.setText(df.format(popRecord.getDate()));
-                    popNeck.setText(popRecord.getNeck().toString());
-                    popBust.setText(popRecord.getBust().toString());
-                    popChest.setText(popRecord.getChest().toString());
-                    popWaist.setText(popRecord.getWaist().toString());
-                    popHip.setText(popRecord.getHip().toString());
-                    popInseam.setText(popRecord.getInseam().toString());
-                    popComments.setText(popRecord.getComments());
 
-                    popNameEdit.setText(popRecord.getName());
-                    popDateEdit.setText(df.format(popRecord.getDate()));
-                    popNeckEdit.setText(popRecord.getNeck().toString());
-                    popBustEdit.setText(popRecord.getBust().toString());
-                    popChestEdit.setText(popRecord.getChest().toString());
-                    popWaistEdit.setText(popRecord.getWaist().toString());
-                    popHipEdit.setText(popRecord.getHip().toString());
-                    popInseamEdit.setText(popRecord.getInseam().toString());
-                    popCommentsEdit.setText(popRecord.getComments());
+                    setValues(true);
 
                     popup.setOutsideTouchable(true);
                     popup.showAtLocation(recordsLayout, Gravity.CENTER,0,0);
@@ -167,27 +149,23 @@ public class Records extends AppCompatActivity {
 
                             if(editting){
                                 //save
-
                                 String nameText = popNameEdit.getText().toString();
                                 String dateString = popDateEdit.getText().toString();
-                                Float neckF = Float.valueOf(popNeckEdit.getText().toString());
-                                Float bustF = Float.valueOf(popBustEdit.getText().toString());
-                                Float chestF = Float.valueOf(popChestEdit.getText().toString());
-                                Float waistF = Float.valueOf(popWaistEdit.getText().toString());
-                                Float hipF = Float.valueOf(popHipEdit.getText().toString());
-                                Float inseamF = Float.valueOf(popInseamEdit.getText().toString());
-                                String commentsText = popCommentsEdit.getText().toString();
 
+                                //ensure name is not empty
                                 if(nameText.matches("")){
-
                                     CharSequence text = "You Must Enter A Name!";
                                     int duration = Toast.LENGTH_SHORT;
+
+                                    //taken from https://developer.android.com/guide/topics/ui/notifiers/toasts.html#Basics
+                                    //Feb 4, 2017 11:30
 
                                     toast = Toast.makeText(context, text, duration);
                                     toast.show();
                                     return;
                                 }
 
+                                //attempt to parse date from string, otherwise set date = null
                                 Date date;
 
                                 try {
@@ -198,7 +176,6 @@ public class Records extends AppCompatActivity {
                                     } else{
                                         CharSequence text = "Invalid Date Entry!";
                                         int duration = Toast.LENGTH_SHORT;
-                                        Log.d("typeadfn", "thies");
 
                                         toast = Toast.makeText(context, text, duration);
                                         toast.show();
@@ -206,29 +183,22 @@ public class Records extends AppCompatActivity {
                                     }
                                 }
 
-                                //set values
+                                //save new values
                                 popRecord.setName(nameText);
                                 popRecord.setDate(date);
-                                popRecord.setNeck(neckF);
-                                popRecord.setBust(bustF);
-                                popRecord.setChest(chestF);
-                                popRecord.setWaist(waistF);
-                                popRecord.setHip(hipF);
-                                popRecord.setInseam(inseamF);
-                                popRecord.setComments(commentsText);
+                                popRecord.setNeckString(popNeckEdit.getText().toString());
+                                popRecord.setBustString(popBustEdit.getText().toString());
+                                popRecord.setChestString(popChestEdit.getText().toString());
+                                popRecord.setWaistString(popWaistEdit.getText().toString());
+                                popRecord.setHipString(popHipEdit.getText().toString());
+                                popRecord.setInseamString(popInseamEdit.getText().toString());
+                                popRecord.setComments(popCommentsEdit.getText().toString());
 
-                                popName.setText(popRecord.getName());
-                                popDate.setText(df.format(popRecord.getDate()));
-                                popNeck.setText(popRecord.getNeck().toString());
-                                popBust.setText(popRecord.getBust().toString());
-                                popChest.setText(popRecord.getChest().toString());
-                                popWaist.setText(popRecord.getWaist().toString());
-                                popHip.setText(popRecord.getHip().toString());
-                                popInseam.setText(popRecord.getInseam().toString());
-                                popComments.setText(popRecord.getComments());
+                                setValues(false);
 
                                 edit.setText("Edit");
 
+                                //change visibility, hide EditTextViews and show TextView
                                 delete.setVisibility(View.GONE);
 
                                 popNameEdit.setVisibility(v.GONE);
@@ -251,7 +221,11 @@ public class Records extends AppCompatActivity {
                                 popInseam.setVisibility(v.VISIBLE);
                                 popComments.setVisibility(v.VISIBLE);
 
+                                //edit button no longer used to save
                                 editting = false;
+
+                                //Taken from http://stackoverflow.com/questions/21793908/edittext-in-popupwindow-not-showing-keyboard-even-if-setfocusabletrue
+                                //Feb 5, 6:10
                                 popup.setFocusable(false);
                                 popup.update();
 
@@ -260,17 +234,18 @@ public class Records extends AppCompatActivity {
                                 saveInFile();
 
                             } else{
+                                //the button is not used to save data
                                 editting = true;
-                                Log.d("hee", "not eddintg");
 
                                 //Taken from http://stackoverflow.com/questions/21793908/edittext-in-popupwindow-not-showing-keyboard-even-if-setfocusabletrue
                                 //Feb 5, 6:10
                                 popup.setFocusable(true);
                                 popup.update();
 
+                                //display EditText and hide TextView
                                 popName.setVisibility(v.GONE);
                                 popDate.setVisibility(v.GONE);
-                                popNeckEdit.setVisibility(v.GONE);
+                                popNeck.setVisibility(v.GONE);
                                 popBust.setVisibility(v.GONE);
                                 popChest.setVisibility(v.GONE);
                                 popWaist.setVisibility(v.GONE);
@@ -280,7 +255,7 @@ public class Records extends AppCompatActivity {
 
                                 popNameEdit.setVisibility(v.VISIBLE);
                                 popDateEdit.setVisibility(v.VISIBLE);
-                                popNeckEdit.setVisibility(v.GONE);
+                                popNeckEdit.setVisibility(v.VISIBLE);
                                 popBustEdit.setVisibility(v.VISIBLE);
                                 popChestEdit.setVisibility(v.VISIBLE);
                                 popWaistEdit.setVisibility(v.VISIBLE);
@@ -293,10 +268,12 @@ public class Records extends AppCompatActivity {
                                 edit.setText("Save");
                             }
 
-                            /**
-                             * deletes selected record
-                             */
+
                             delete.setOnClickListener(new View.OnClickListener() {
+                                /**
+                                 * deletes selected record
+                                 * @param v view of click
+                                 */
                                 @Override
                                 public void onClick(View v) {
                                     adapter.remove(popRecord);
@@ -305,7 +282,7 @@ public class Records extends AppCompatActivity {
                                     saveInFile();
 
                                     numRecords = recordsList.size();
-                                    recordCount.setText(numRecords.toString());
+                                    recordCount.setText(String.valueOf(numRecords));
                                     popup.dismiss();
                                 }
                             });
@@ -316,6 +293,9 @@ public class Records extends AppCompatActivity {
         });
     }
 
+    /**
+     * initialises adapter
+     */
     protected void onStart() {
         // TODO Auto-generated method stub
         super.onStart();
@@ -333,8 +313,6 @@ public class Records extends AppCompatActivity {
 
             Record record = gson.fromJson(recordString, Record.class);
 
-            Log.d("recordsSring", recordString);
-
             recordsList.add(record);
             adapter.notifyDataSetChanged();
 
@@ -342,11 +320,15 @@ public class Records extends AppCompatActivity {
         }
 
         numRecords = recordsList.size();
-        recordCount.setText(numRecords.toString());
+        recordCount.setText(String.valueOf(numRecords));
 
 
     }
 
+    /**
+     * used some code from lonelyTwitter
+     * loads json data from a file
+     */
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -366,6 +348,11 @@ public class Records extends AppCompatActivity {
         }
     }
 
+    /**
+     * used some code from lonelyTwitter
+     *
+     * saves json data in a file
+     */
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,
@@ -385,27 +372,48 @@ public class Records extends AppCompatActivity {
         }
     }
 
-    public void edit(View view){
-        EditText popNameEdit = (EditText) view.findViewById(R.id.popNameEdit);
-        /*TextView popDateEdit = (TextView) popup.getContentView().findViewById(R.id.popDateEdit);
-        TextView popNeckEdit = (TextView) popup.getContentView().findViewById(R.id.popNeckEdit);
-        TextView popBustEdit = (TextView) popup.getContentView().findViewById(R.id.popBustEdit);
-        TextView popChestEdit = (TextView) popup.getContentView().findViewById(R.id.popChestEdit);
-        TextView popWaistEdit = (TextView) popup.getContentView().findViewById(R.id.popWaistEdit);
-        TextView popHipEdit = (TextView) popup.getContentView().findViewById(R.id.popHipEdit);
-        TextView popInseamEdit = (TextView) popup.getContentView().findViewById(R.id.popInseamEdit);
-        TextView popCommentsEdit = (TextView) popup.getContentView().findViewById(R.id.popCommentsEdit);*/
-        popName.setVisibility(view.GONE);
-        popNameEdit.setVisibility(view.VISIBLE);
-    }
     //Taken from http://stackoverflow.com/questions/21898723/dismiss-the-popup-window-by-back-button
     //Feb 5, 2017 4:30
+
+    /**
+     * allows back button to be used on popup window
+     */
     @Override
     public void onBackPressed() {
         if (popup != null && popup.isShowing()) {
             popup.dismiss();
         } else {
             super.onBackPressed();
+        }
+    }
+
+    /**
+     * Assigns TexViews to values
+     * @param all determines whether to set EditTexts as well
+     */
+    private void setValues(Boolean all){
+        //set values
+
+        popName.setText(popRecord.getName());
+        popDate.setText(popRecord.getDateString(df));
+        popNeck.setText(popRecord.getNeckString());
+        popBust.setText(popRecord.getBustString());
+        popChest.setText(popRecord.getChestString());
+        popWaist.setText(popRecord.getWaistString());
+        popHip.setText(popRecord.getHipString());
+        popInseam.setText(popRecord.getInseamString());
+        popComments.setText(popRecord.getComments());
+
+        if(all){
+            popNameEdit.setText(popRecord.getName());
+            popDateEdit.setText(popRecord.getDateString(df));
+            popNeckEdit.setText(popRecord.getNeckString());
+            popBustEdit.setText(popRecord.getBustString());
+            popChestEdit.setText(popRecord.getChestString());
+            popWaistEdit.setText(popRecord.getWaistString());
+            popHipEdit.setText(popRecord.getHipString());
+            popInseamEdit.setText(popRecord.getInseamString());
+            popCommentsEdit.setText(popRecord.getComments());
         }
     }
 }

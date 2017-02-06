@@ -2,12 +2,10 @@ package com.example.gdbaker_sizebook;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -41,14 +39,13 @@ public class RecordAdapter extends ArrayAdapter<Record> {
 
         // Populate the data into the template view using the data object
         recordName.setText(record.getName());
-        recordChest.setText(record.getChest().toString());
-        recordBust.setText(record.getBust().toString());
-        recordWaist.setText(record.getWaist().toString());
-        recordInseam.setText(record.getInseam().toString());
+        recordChest.setText(record.getChestString());
+        recordBust.setText(record.getBustString());
+        recordWaist.setText(record.getWaistString());
+        recordInseam.setText(record.getInseamString());
         // Return the completed view to render on screen
         return convertView;
     }
-
 
     @Nullable
     @Override
