@@ -83,7 +83,9 @@ public class NewRecord extends AppCompatActivity {
             }
         }
 
+        //TODO check all
         Float neck = Float.valueOf(neckText.getText().toString());
+
         Float bust = Float.valueOf(bustText.getText().toString());
         Float chest = Float.valueOf(chestText.getText().toString());
         Float waist = Float.valueOf(waistText.getText().toString());

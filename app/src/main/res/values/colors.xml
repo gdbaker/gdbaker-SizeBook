@@ -6,5 +6,7 @@
     <color name="textBox">#CEF6CE</color>
     <color name="black">#000000</color>
     <color name="names">#610B21</color>
-    <color name="background">#D8D8D8</color>
+    <color name="background">#CEE3F6</color>
+    <color name="popText">#6E6E6E</color>
+    <color name="red">#FF0000</color>
 </resources>

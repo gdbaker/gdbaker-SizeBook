@@ -1,6 +1,7 @@
 package com.example.gdbaker_sizebook;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  */
 
 public class RecordAdapter extends ArrayAdapter<Record> {
-    //https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView
+    //taken from https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView
     //February 4, 2017 11:10pm
 
     public RecordAdapter(Context context, ArrayList<Record> users) {
@@ -37,19 +38,6 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         TextView recordBust = (TextView) convertView.findViewById(R.id.recordBust);
         TextView recordWaist = (TextView) convertView.findViewById(R.id.recordWaist);
         TextView recordInseam = (TextView) convertView.findViewById(R.id.recordInseam);
-        LinearLayout layout = (LinearLayout) convertView.findViewById(R.id.listElementLayout);
-        //declaring OnClickListener as an object
-
-        //http://stackoverflow.com/questions/29640674/issue-with-onclicklistener-for-button-in-fragment
-        View.OnClickListener btnClick = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-
-            }
-        };
-        layout.setOnClickListener(btnClick);
-
 
         // Populate the data into the template view using the data object
         recordName.setText(record.getName());
@@ -59,5 +47,12 @@ public class RecordAdapter extends ArrayAdapter<Record> {
         recordInseam.setText(record.getInseam().toString());
         // Return the completed view to render on screen
         return convertView;
+    }
+
+
+    @Nullable
+    @Override
+    public Record getItem(int position) {
+        return super.getItem(position);
     }
 }
