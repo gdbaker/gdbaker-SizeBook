@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -41,6 +42,15 @@ public class NewRecord extends AppCompatActivity {
         hipText = (EditText) findViewById(R.id.editHip);
         inseamText = (EditText) findViewById(R.id.editInseam);
         commentsText = (EditText) findViewById(R.id.editComments);
+
+        //Taken from http://stackoverflow.com/questions/5357455/limit-decimal-places-in-android-edittext
+        //Feb 5, 2017 11:45
+        neckText.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+        bustText.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+        chestText.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+        waistText.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+        hipText.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+        inseamText.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
     }
 
     public void submit(View view){

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -132,6 +133,16 @@ public class Records extends AppCompatActivity {
                     popHipEdit = (EditText) popup.getContentView().findViewById(R.id.popHipEdit);
                     popInseamEdit = (EditText) popup.getContentView().findViewById(R.id.popInseamEdit);
                     popCommentsEdit = (EditText) popup.getContentView().findViewById(R.id.popCommentsEdit);
+
+                    //limits decimal input
+                    //Taken from http://stackoverflow.com/questions/5357455/limit-decimal-places-in-android-edittext
+                    //Feb 5, 2017 11:45
+                    popNeckEdit.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+                    popBustEdit.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+                    popChestEdit.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+                    popWaistEdit.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+                    popHipEdit.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
+                    popInseamEdit.setFilters(new InputFilter[] {new DecimalDigitsInputFilter(5,1)});
 
                     // Populate the data into the template view using the data object
 
@@ -415,5 +426,10 @@ public class Records extends AppCompatActivity {
             popInseamEdit.setText(popRecord.getInseamString());
             popCommentsEdit.setText(popRecord.getComments());
         }
+    }
+
+    public void createRecord(View view){
+        Intent intent = new Intent(this, NewRecord.class);
+        startActivity(intent);
     }
 }

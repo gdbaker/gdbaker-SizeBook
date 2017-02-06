@@ -6,8 +6,6 @@
     android:orientation="vertical"
     android:id="@+id/recordsLayout">
 
-
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,12 +18,23 @@
 
         <TextView
             android:text="Records"
-            android:layout_width="180dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:id="@+id/recordsDisplay"
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"/>
+        <Button
+            android:id="@+id/newRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_record"
+            android:onClick="createRecord"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_gravity="top|right"
+            style="?android:attr/borderlessButtonStyle"/>
+
         <TextView
             android:text="Number of Records:"
             android:layout_width="wrap_content"
@@ -37,6 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
+            android:text="100"
             android:textColor="@color/colorPrimaryDark"
             android:paddingLeft="4dp"/>
 
