@@ -1,0 +1,331 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="74dp"
+                android:layout_height="37dp"
+                android:text="@string/pop_edit"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/black"
+                android:id="@+id/editButton"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:text="DELETE"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:id="@+id/deleteButton"
+                android:visibility="gone"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_toStartOf="@+id/editButton" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+
+            android:orientation="vertical"
+
+            android:id="@+id/popLinear">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popName"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_name"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popNameEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_date_entered"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popDate"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_date"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popDateEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="date"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_neck_circumference"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popNeck"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_neck"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popNeckEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_bust_circumference"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popBust"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_bust"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popBustEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_chest_circumference"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popChest"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_chest"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popChestEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_waist_circumference"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popWaist"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_waist"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popWaistEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_hip_circumference"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popHip"
+                android:textColor="@color/popText"
+                android:textStyle="bold"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_hip"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popHipEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_inseam_length"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popInseam"
+                android:textColor="@color/popText"
+                android:textStyle="bold" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_inseam"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popInseamEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:inputType="numberDecimal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_comments"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingTop="1dp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pop_empty"
+                android:textSize="15sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popComments"
+                android:textColor="@color/popText"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_comments"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:id="@+id/popCommentsEdit"
+                android:textColor="@color/popText"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:inputType="textMultiLine" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

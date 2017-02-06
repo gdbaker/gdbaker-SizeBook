@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <!-- name -->
+        <TextView
+            android:text="@string/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textName"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_name"
+            android:maxLines="1"
+            android:inputType="textPersonName"/>
+
+        <!-- date -->
+        <TextView
+            android:text="@string/text_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDate"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_date"
+            android:maxLines="1"
+            android:inputType="date"/>
+
+        <!-- neck -->
+        <TextView
+            android:text="@string/text_neck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textNeck"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editNeck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_neck"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+        <!-- bust -->
+        <TextView
+            android:text="@string/text_bust"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textBust"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editBust"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_bust"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+        <!-- chest -->
+        <TextView
+            android:text="@string/text_chest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textChest"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editChest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_chest"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+        <!-- waist -->
+        <TextView
+            android:text="@string/text_waist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textWaist"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editWaist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_waist"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+        <!-- hip -->
+        <TextView
+            android:text="@string/text_hip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textHip"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editHip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_hip"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+        <!-- inseam -->
+        <TextView
+            android:text="@string/text_inseam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInseam"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editInseam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_inseam"
+            android:maxLines="1"
+            android:inputType="numberDecimal"/>
+
+        <!-- comment -->
+        <TextView
+            android:text="@string/text_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textComments"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+        <EditText android:id="@+id/editComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_comments"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:text="@string/submit_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitRecord"
+            android:onClick="submit"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
