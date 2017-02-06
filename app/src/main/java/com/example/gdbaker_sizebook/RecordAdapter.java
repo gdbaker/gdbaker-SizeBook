@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Gregory on 2017-02-04.
+ * Adapter used to convert ArrayList to ListView
  */
 
 public class RecordAdapter extends ArrayAdapter<Record> {

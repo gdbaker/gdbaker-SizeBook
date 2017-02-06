@@ -5,6 +5,7 @@ import java.util.Date;
 
 /**
  * Created by Gregory on 2017-02-04.
+ * Holds values for clothing measurements
  */
 
 public class Record {
@@ -110,6 +111,11 @@ public class Record {
 
 
     //strings only
+
+    /**
+     * converts float into string then returns
+     * @return string of neck
+     */
     public String getNeckString(){
         if(this.neck == null){
             return "";
@@ -119,6 +125,10 @@ public class Record {
         }
     }
 
+    /**
+     * sets neck Float from string
+     * @param entry string to convert
+     */
     public void setNeckString(String entry){
         try{
             this.neck = Float.valueOf(entry);
@@ -128,6 +138,10 @@ public class Record {
         }
     }
 
+    /**
+     * converts float into string then returns
+     * @return string of bust
+     */
     public String getBustString(){
         if(this.bust == null){
             return "";
@@ -137,6 +151,10 @@ public class Record {
         }
     }
 
+    /**
+     * set bust Float from string
+     * @param entry string to convert
+     */
     public void setBustString(String entry){
         try{
             this.bust = Float.valueOf(entry);
@@ -146,6 +164,10 @@ public class Record {
         }
     }
 
+    /**
+     * converts float into string then returns
+     * @return string of chest
+     */
     public String getChestString(){
         if(this.chest == null){
             return "";
@@ -155,6 +177,10 @@ public class Record {
         }
     }
 
+    /**
+     * set chest Float from string
+     * @param entry string to convert
+     */
     public void setChestString(String entry){
         try{
             this.chest = Float.valueOf(entry);
@@ -164,6 +190,10 @@ public class Record {
         }
     }
 
+    /**
+     * converts float into string then returns
+     * @return string of waist
+     */
     public String getWaistString(){
         if(this.waist == null){
             return "";
@@ -173,6 +203,10 @@ public class Record {
         }
     }
 
+    /**
+     * set waist Float from string
+     * @param entry string to convert
+     */
     public void setWaistString(String entry){
         try{
             this.waist = Float.valueOf(entry);
@@ -182,6 +216,10 @@ public class Record {
         }
     }
 
+    /**
+     * converts float into string then returns
+     * @return
+     */
     public String getHipString(){
         if(this.hip == null){
             return "";
@@ -191,6 +229,10 @@ public class Record {
         }
     }
 
+    /**
+     * set hip Float from string
+     * @param entry string to convert
+     */
     public void setHipString(String entry){
         try{
             this.hip = Float.valueOf(entry);
@@ -200,6 +242,10 @@ public class Record {
         }
     }
 
+    /**
+     * converts float into string then returns
+     * @return string of inseam
+     */
     public String getInseamString(){
         if(this.inseam == null){
             return "";
@@ -209,6 +255,10 @@ public class Record {
         }
     }
 
+    /**
+     * set inseam Float from String
+     * @param entry string to convert
+     */
     public void setInseamString(String entry){
         try{
             this.inseam = Float.valueOf(entry);
@@ -218,6 +268,11 @@ public class Record {
         }
     }
 
+    /**
+     * get date as a string
+     * @param df SimpleDateFormat, format of the way the string should look
+     * @return string of date
+     */
     public String getDateString(SimpleDateFormat df){
         if(this.date == null){
             return "";

@@ -5,17 +5,20 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+/**
+ * activity, displays the entry text boxes
+ * for a new activity, sends intent to main
+ */
 
 public class NewRecord extends AppCompatActivity {
     private EditText nameText;
@@ -54,7 +57,7 @@ public class NewRecord extends AppCompatActivity {
     }
 
     public void submit(View view){
-        Intent intent = new Intent(this, Records.class);
+        Intent intent = new Intent(this, Main.class);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Toast toast;
         Date date;
